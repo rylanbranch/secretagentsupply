@@ -2,6 +2,11 @@ html {
 	font-size: 18px;
 }
 
+body {
+	font-family: Helvetica, sans-serif;
+	color: white;
+}
+
 .header {
 	display: flex;
 	justify-content: center;
@@ -23,12 +28,208 @@ html {
 .logo-name {
 	margin: 0.66rem 0 0.66rem 0;
 	font-size: 1rem;
-	font-family: Helvetica, sans-serif;
-	color: white;
 }
 
 .hero {
 	height: 25rem;
 	background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
 	background-size: cover;
+	display: flex;
+	justify-content: center;
+}
+
+.hero-content {
+	width: 960px;
+	display: flex;
+	align-items: center;
+}
+
+.hero-overlay {
+	background-color: black;
+	color: white;
+	padding: 2rem 3rem;
+	width: 20rem;
+}
+
+.hero-overlay h4 {
+	padding-bottom: 0.25rem;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.hero-overlay h1 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.main-nav {
+	width: 100%;
+	background-color: firebrick;
+	max-height: 2.5rem;
+	display: flex;
+	justify-content: center;
+}
+
+.nav-content {
+	width: 960px;
+	padding: 0.75rem 0;
+}
+
+.nav-content-tablet {
+	width: 960px;
+	padding: 0.75rem 0;
+}
+
+.nav-content nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-content-tablet nav {
+	display: flex;
+	justify-content: center;
+}
+
+.content {
+	padding-top: 3rem;
+	width: 960px;
+	margin: 0 auto;
+}
+
+.products {
+	width: 960px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.product {
+	width: 30%;
+	background-color: black;
+}
+
+.product img {
+	max-height: 9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.product span {
+	display: flex;
+	justify-content: center;
+}
+
+.product-image {
+	height: 13rem;
+	border: 4px solid black;
+	background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-description {
+	padding: 0.5rem 0;
+}
+
+.info {
+	display: flex;
+	justify-content: space-between;
+	width: 960px;
+	padding-top: 3rem;
+}
+
+.info-title {
+	display: block;
+	background-color: black;
+	padding: 1rem 2rem;
+}
+
+.location-info {
+	width: 35%;
+}
+
+.info-content {
+	color: black;
+}
+
+footer {
+	height: 5rem;
+	margin-top: 4rem;
+	background-color: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-content {
+	width: 960px;
+}
+
+.nav-content-tablet {
+	display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+	.nav-content {
+		display: none;
+	}
+	.nav-content-tablet {
+		display: inline;
+	}
+	.product.glasses {
+		display: none;
+	}
+	.content, .products, footer, .footer-content, .info {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 470px) {
+	.product {
+		width: 47%;
+	}
+}
+
+@media only screen and (max-width: 470px) {
+	.product {
+		width: 90%;
+	}
+	.products {
+		justify-content: center;
+	}
+	.product.watch {
+		display: none;
+	}
+	.info {
+		display: block;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.location-info {
+		width: 90%;
+	}
+	.location-info.hours {
+		padding-top: 0.5rem;
+	}
+	.footer-content {
+		text-align: center;
+	}
+	.hero-overlay {
+		margin-top: 10rem;
+		width: 100%;
+		padding: 1rem 2rem;
+	}
+	.hero-overlay h4 {
+		font-size: 0.77rem;
+	}
+	.hero-overlay h1 {
+		font-size: 1rem;
+	}
+	.hero {
+		height: 15rem;
+	}
 }
